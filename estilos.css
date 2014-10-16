@@ -52,7 +52,18 @@ body
 	font-size: 16px;
 	margin: 0;
 }
-
+footer
+{
+	background: #434343;
+	padding: 1em 0;
+	text-align: center;
+	width: 100%;
+}
+footer p
+{
+	color: #A7A7A7;
+	margin: 0;
+}
 header
 {
 	background: #434343;
@@ -163,7 +174,10 @@ nav #publicar_nav a
 	padding: 0.5em 1em;
 	text-decoration: none;
 }
-
+#bienvenida
+{
+	display: none;
+}
 #contenido
 {
 	margin: 1em;
