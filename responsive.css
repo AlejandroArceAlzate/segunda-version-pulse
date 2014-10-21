@@ -16,6 +16,47 @@
 	{
 		color: #434343;
 	}
+	#bienvenida #actividad h2
+	{
+		background: #DD4F24;
+		color: white;
+		text-align: center;
+	}
+	#bienvenida #actividad .actividad_item
+	{
+		display: inline-block;
+	}
+	#bienvenida #actividad .actividad_item a
+	{
+		background: #DD4F24;
+		border-radius: 4px;
+		color: white;
+		display: inline-block;
+		float: left;
+		height: 100%;
+		margin: 0 1em 0 0;
+		padding: 4px;
+		position: relative;
+		text-decoration: none;
+	}
+	#bienvenida #actividad .actividad_item a:after
+	{
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid #DD4F24;
+		content: "";
+		left: 10px;
+		position: absolute;
+		top: 100%
+	}
+	#bienvenida #actividad .actividad_item h3
+	{
+
+		font-size: 1em;
+		font-style: italic;
+		margin: 0 1em;
+		padding: 0.5em 0.5em 0;
+	}
 	#bienvenida #mensaje_registro,
 	#bienvenida #registro
 	{
