@@ -1,5 +1,4 @@
-@media screen and (min-width: 768px)
-{
+@media screen and (min-width: 800px){
 	body
 	{
 		margin: 0 auto;
@@ -10,7 +9,7 @@
 		display: block;
 		border-bottom: 1px solid #CCC;
 		float: right;
-		margin-right: 2%;
+		margin-right:2%;
 		width: 25%;
 	}
 	#bienvenida h2
@@ -34,8 +33,62 @@
 		font-size: 1.2em;
 		padding: 0.5em;
 	}
-	#contenido 
+	#contenido, #video_promo
 	{
 		width: 70%;
+	}
+}
+@media screen and (min-width: 1100px ){
+
+	#video_promo
+	{
+		width: 70%
+	}
+	#video_promo
+	{
+		background: lightgrey;
+		border-bottom: 3px #22BCE0 solid;
+		display: inline-block;
+		font-size: 0.9em;
+		margin: 1em;
+	}
+	#video_promo a
+	{
+		display: block;
+		text-decoration: none;
+	}
+	#video_promo .video_info .autor_video a
+	{
+		display: inline-block;
+	}
+	#video_promo .video_info .titulo_video
+	{
+		font-size: 1em;
+		font-style: italic;
+		padding: 0.5em 0.5em 0;
+	}
+	#video_promo .video_info .votacion
+	{
+		float: left;
+		padding: 0 1em;
+		text-align: center;	
+
+	}
+	#video_promo .video_info .votacion .down:after,
+	#video_promo .video_info .votacion .up:after
+	{
+		font-family: "icomoon";
+		font-size: 1.5em;
+	}
+	#video_promo .video_info .votacion .down:after
+	{
+		color: red;
+		content: "\e602";
+	}
+
+	#video_promo .video_info .votacion .up:after
+	{
+		color: green;
+		content: "\e603";
 	}
 }
