@@ -68,6 +68,7 @@ footer p
 
 form
 {
+	display: none;
 	padding: 0.8em;
 
 }
