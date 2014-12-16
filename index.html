@@ -223,5 +223,21 @@
     		<p><strong>Powered by Platzi</strong></p>
     		<p>Mejorando.la</p>
     	</footer>
+        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript">
+            function darBienvenida()
+            {
+                alert('hola');
+            }
+
+            function haceralgo()
+            {
+                console.log('estoy haciendo algo');
+            }
+
+            $(document)
+                .on('load', darBienvenida)
+                .on('load', haceralgo);
+        </script>
     </body>
 </html>
