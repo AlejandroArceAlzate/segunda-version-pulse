@@ -65,6 +65,13 @@ footer p
 	color: #A7A7A7;
 	margin: 0;
 }
+
+form
+{
+	padding: 0.8em;
+
+}
+
 header
 {
 	background: #434343;
@@ -113,6 +120,13 @@ header #logo img
 {
 	width: 80px;
 }
+
+label
+{
+	display: inline-block;
+	width: 60px;
+}
+
 nav
 {
 	background: #878787;

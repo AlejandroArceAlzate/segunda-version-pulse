@@ -38,6 +38,26 @@
     			<li id="publicar_nav"><a href="#">Publicar</a></li>
     		</ul>
     	</nav>
+        <form action="">
+            <p>
+                <label for="titulo">
+                    Titulo
+                </label>
+                <input id="titulo" placeholder="Ingrese el Titulo" type="text" name="Titulo" />
+            </p>
+            <p>
+                <label for="autor">
+                    Autor
+                </label>
+                <input id="autor" placeholder="Ingrese el Autor" type="text" name="Autor" />
+            </p>
+            <p>
+                <label for="tag">
+                    Tag
+                </label>
+                <input id="tag" placeholder="Ingrese el Tag" type="text" name="Tag" />
+            </p>
+        </form>
         <section id="video_promo">
             <video  width="100%" height="360"autoplay controls>
                 <source src="lecturas.mp4" type="video/mp4">
@@ -224,20 +244,8 @@
     		<p>Mejorando.la</p>
     	</footer>
         <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-        <script type="text/javascript">
-            function darBienvenida()
-            {
-                alert('hola');
-            }
-
-            function haceralgo()
-            {
-                console.log('estoy haciendo algo');
-            }
-
-            $(document)
-                .on('load', darBienvenida)
-                .on('load', haceralgo);
+        <script>
+          
         </script>
     </body>
 </html>
