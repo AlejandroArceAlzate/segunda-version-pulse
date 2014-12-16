@@ -14,7 +14,12 @@
     	<header>
 
     		<figure id="logo"> 
-    			<img src="logo.png"/> 
+    			<img src="logo.png"/>
+                <div>   
+                    <a href="#12" class="sizer">A</a>
+                    <a href="#16" class="sizer">A</a>
+                    <a href="#20" class="sizer">A</a> 
+                </div>
     		</figure>
 
     		<h1 id="titulo_header">Pulse: comunidad de gente cool, atractiva y millonaria</h1>
@@ -24,7 +29,7 @@
     			<figcaption>
     			</figcaption>
     		</figure>
-
+            
     	</header>
 
     	<nav>
@@ -293,6 +298,21 @@
                 $('input[type=text]').val('');
                 $('form').slideUp();
             }
+
+            function crearSizer(pixels)
+            {
+                return function()
+                {
+                    $('body').css('font-size', pixels + 'px');
+                }
+            }
+
+            $('.sizer').each(function(i, link){
+                var pixels = $(link).prop('hash').substring(1);
+                $(link)
+                    .css('font-size', pixels + 'px')
+                    .on('click', crearSizer(pixels));
+            });
           });
         </script>
     </body>
