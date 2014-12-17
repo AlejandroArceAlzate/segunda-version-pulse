@@ -74,7 +74,7 @@
             <div class="video_info">
                 <p class="votacion">
                     <a class="up"href="#"></a>
-                        41
+                    <span class="total">41</span> 
                     <a class="down" href="#"></a>
                 </p>
 
@@ -135,7 +135,7 @@
 
     			<p class="votacion">
     				<a class="up"href="#"></a>
-    				3141
+    				<span class="total">3141</span> 
     				<a class="down" href="#"></a>
     			</p>
     		</article>
@@ -161,7 +161,7 @@
 
                 <p class="votacion">
                     <a class="up"href="#"></a>
-                    3141
+                    <span class="total">3141</span> 
                     <a class="down" href="#"></a>
                 </p>
             </article>
@@ -187,7 +187,7 @@
 
                 <p class="votacion">
                     <a class="up"href="#"></a>
-                    3141
+                    <span class="total">3141</span> 
                     <a class="down" href="#"></a>
                 </p>
             </article>
@@ -213,7 +213,7 @@
 
                 <p class="votacion">
                     <a class="up"href="#"></a>
-                    3141
+                    <span class="total">3141</span> 
                     <a class="down" href="#"></a>
                 </p>
             </article>
@@ -239,7 +239,7 @@
 
                 <p class="votacion">
                     <a class="up"href="#"></a>
-                    3141
+                    <span class="total">3141</span> 
                     <a class="down" href="#"></a>
                 </p>
             </article>
@@ -249,7 +249,7 @@
     		<p><strong>Powered by Platzi</strong></p>
     		<p>Mejorando.la</p>
     	</footer>
-        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
         <script>
           $(function(){
             $('#publicar_nav').on('click', mostrarFormulario);
@@ -285,7 +285,7 @@
                     </p>\
                     <p class="votacion">\
                         <a class="up"href="#"></a>\
-                        0\
+                        <span class="total">1</span> \
                         <a class="down" href="#"></a>\
                     </p>\
                 </article>';
@@ -313,6 +313,33 @@
                     .css('font-size', pixels + 'px')
                     .on('click', crearSizer(pixels));
             });
+
+            function crearContador(valorInicial) {
+            var contador = valorInicial || 0;
+            return {
+                up : function() {
+                    return ++contador;
+                },
+                down : function() {
+                    return --contador;
+                }
+            };
+        };
+
+        $('.total').each(function(i, elem) {
+            var contTotal = crearContador(elem.innerHTML);
+            $(elem)
+                .siblings('.up')
+                    .on('click', function(ev) {
+                        ev.preventDefault();
+                        $(elem).html(contTotal.up());
+                    })
+                .siblings('.down')
+                    .on('click', function(ev){
+                        ev.preventDefault();
+                        $(elem).html(contTotal.down());
+                    });
+        });
           });
         </script>
     </body>
